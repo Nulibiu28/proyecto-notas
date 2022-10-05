@@ -44,7 +44,8 @@ public class WebSecurityConfig {
                                 authz
                                         .antMatchers("/api/obtenerToken").permitAll()
                                         .antMatchers("/h2-console/**").permitAll()
-                                        .antMatchers("/api/guardarNota/**").permitAll()
+                                        .antMatchers("/api/obtenerNotas/**").hasAnyAuthority("USER","ADMIN")
+                                        .antMatchers("/api/guardarNota/**").hasAuthority("ADMIN")
                                         .anyRequest().authenticated()
                                         .and()
                                         .cors()

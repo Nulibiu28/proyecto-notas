@@ -52,6 +52,9 @@ public class EstudiantePrincipal implements UserDetails {
     public String getApellidos() {
         return apellidos;
     }
+    public Collection<? extends GrantedAuthority> getRoles() {
+        return roles;
+    }
 
     @Override
     public String getUsername() {

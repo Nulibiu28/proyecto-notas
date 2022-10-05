@@ -10,6 +10,7 @@ import com.qds.prueba.notas.services.NotasService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -53,7 +54,9 @@ public class NotasController {
     @PostMapping("/guardarNota/{idAlumno}")
     public ResponseEntity<Map<String,Object>> guardarNotaAlumno(
             @PathVariable Long idAlumno,
-            @RequestBody List<Nota> notas){
+            @RequestBody List<Nota> notas,
+            @CurrentUser EstudiantePrincipal estudiante){
+        System.out.println(estudiante.getRoles());
         return new ResponseEntity<>(notasService.guardarNotas(idAlumno, notas), HttpStatus.ACCEPTED);
     }
 

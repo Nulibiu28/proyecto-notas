@@ -2,19 +2,15 @@ package com.qds.prueba.notas;
 
 import com.qds.prueba.notas.daos.EstudiantesRepository;
 import com.qds.prueba.notas.daos.NotasRepository;
-import com.qds.prueba.notas.entity.Estudiante;
 import com.qds.prueba.notas.entity.Nota;
 import com.qds.prueba.notas.services.Impl.NotasServiceImpl;
 import com.qds.prueba.notas.services.NotasService;
 import com.qds.prueba.notas.utils.Data;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.lang.reflect.Array;
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
