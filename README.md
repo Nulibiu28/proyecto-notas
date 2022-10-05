@@ -1,6 +1,6 @@
 # Proyecto prueba de notas y estudiantes
 
-Este es un proyecto desarrollado bajo el framework de spring usando api's rest para exponer el listado y guardado de notas con respecto a un estudiante en específico. Se han añadido ciertas pruebas unitarias que se hicieron mediante TDD.
+Este es un proyecto desarrollado bajo el framework de spring usando api's rest para exponer el listado y guardado de notas con respecto a un estudiante en específico. Se han añadido ciertas pruebas unitarias que se hicieron mediante TDD. Como base de datos se esta usando H2 por temas de comodidad en el desarrollo.
 
 Para obtener un JWT y poder acceder a los recursos del api se tiene que hacer una petición GET al siguiente endpoint
 
